@@ -32,7 +32,7 @@ const common = {
             chunksSortMode: 'dependency'
         }),
         new CopyWebpackPlugin([
-            'src/assets'
+            {from: 'src/assets', to: 'assets'}
         ])
     ]
 }

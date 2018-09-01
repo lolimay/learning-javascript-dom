@@ -1,0 +1,14 @@
+li {
+    list-style: none;
+}
+li a {
+    text-decoration: none;
+}
+li a:hover {
+    color: #007ACC;
+}
+
+#placeholder {
+    width: 960px;
+    height: 540px;
+}
