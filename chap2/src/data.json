@@ -1,0 +1,27 @@
+{
+    "cat": {
+        "name": "猫",
+        "url": "./assets/images/cat.jpg",
+        "title": "一只正在看着电脑屏幕的夜猫子"
+    },
+    "dog": {
+        "name": "小狗",
+        "url": "./assets/images/dog.jpg",
+        "title": "一只可爱的小狗"
+    },
+    "planet": {
+        "name": "星球",
+        "url": "./assets/images/planet.jpg",
+        "title": "令人震撼的星球"
+    },
+    "grass": {
+        "name": "草丛",
+        "url": "./assets/images/grass.jpg",
+        "title": "一片生意盎然的草地"
+    },
+    "magic": {
+        "name": "魔幻",
+        "url": "./assets/images/magic.jpg",
+        "title": "具有魔幻色彩的世界"
+    }
+}
