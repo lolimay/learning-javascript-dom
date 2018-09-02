@@ -36,7 +36,7 @@ for(const item of Object.values(images)) { // for(item in images)
 gallery.id = 'placeholder'
 gallery.src = './assets/images/gallery.png'
 description.classList.add('description')
-description.innerText = '请选择一张图片'
+description.innerText = '请选择一张图片' 
 
 document.body.appendChild(container)
 util.appendChilds(container, h1, ul, gallery, description)
