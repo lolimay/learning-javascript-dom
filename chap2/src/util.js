@@ -4,6 +4,14 @@ export default {
             element.appendChild(childs[i])
         }
     },
+    insertAfter(newElement, targetElement) {
+        const parent = targetElement.parentNode
+        if(parent.lastChild === targetElement) {
+            parent.appendChild(newElement)
+        } else {
+            parent.insertBefore(newElement, targetElement.nextSibling)
+        }
+    },
     countBodyChildrenElement() {
         return document.body.childElementCount
     },

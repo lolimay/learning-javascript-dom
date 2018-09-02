@@ -14,23 +14,34 @@ onload: body的子元素节点一共有：${util.countBodyChildrenElement()} 个
 onload: body的子节点一共有：${util.countBodyChildren()} 个`.trim())
 }
 
-container.classList.add('.container')
+container.classList.add('container')
 h1.classList.add('title')
 h1.innerText = 'lolimay 图库'
 for(const item of Object.values(images)) { // for(item in images)
     const li = document.createElement('li')
 
     // li.innerHTML = `<a href="${images[`${item}`].url}" title="${images[`${item}`].title}">${images[`${item}`].name}</a>` // ${images[`${item}`]}
-    li.innerHTML = `<a href="${item.url}">${item.name}</a>`
+    li.innerHTML = `<a href="${item.url}" title="${item.title}">${item.name}</a>`
     ul.appendChild(li)
 
     const a = li.querySelector('a')
     a.onclick = (e) => {
+        const buttons = document.querySelectorAll('ul li')
+        const button = e.target.parentNode
         const descripton =  document.querySelector('.description')
+        const title = e.target.getAttribute('title')
 
         event.preventDefault()
+        buttons.forEach((item) => {
+            item.classList.remove('--current')
+        })
+        button.classList.add('--current')
         util.showPic(e.target)
-        descripton.innerText = e.target.getAttribute('title')
+        if(title === 'undefined'|| title === '') {
+            descripton.innerText = '该图片没有描述'
+        } else {
+            descripton.innerText = e.target.getAttribute('title')
+        }
     }
 }
 gallery.id = 'placeholder'
@@ -39,4 +50,6 @@ description.classList.add('description')
 description.innerText = '请选择一张图片' 
 
 document.body.appendChild(container)
-util.appendChilds(container, h1, ul, gallery, description)
+util.appendChilds(container, gallery, ul)
+util.insertAfter(description, gallery)
+container.insertBefore(h1, gallery) // parentElement、newElement、targetElement

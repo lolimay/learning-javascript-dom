@@ -1,8 +1,7 @@
 {
     "cat": {
         "name": "猫",
-        "url": "./assets/images/cat.jpg",
-        "title": "一只正在看着电脑屏幕的夜猫子"
+        "url": "./assets/images/cat.jpg"
     },
     "dog": {
         "name": "小狗",
@@ -12,7 +11,7 @@
     "planet": {
         "name": "星球",
         "url": "./assets/images/planet.jpg",
-        "title": "令人震撼的星球"
+        "title": ""
     },
     "grass": {
         "name": "草丛",
